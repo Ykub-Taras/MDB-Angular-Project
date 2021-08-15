@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataStoreService} from "../movies/services/data-store.service";
 
 @Component({
   selector: 'app-navigation-bar',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataStoreService:DataStoreService) { }
 
   ngOnInit(): void {
   }
 
+  setChoiceP() {this.dataStoreService.choiceItem.next('popular')}
+  setChoiceD() {this.dataStoreService.choiceItem.next('discover')}
 }

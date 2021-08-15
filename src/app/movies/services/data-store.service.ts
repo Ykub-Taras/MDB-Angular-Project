@@ -6,7 +6,8 @@ import {BehaviorSubject} from "rxjs";
 })
 export class DataStoreService {
 
-  dataItem :BehaviorSubject<any> = new BehaviorSubject<any>('');
+  choiceItem :BehaviorSubject<any> = new BehaviorSubject<any>('popular');
+
 
   idGenre :BehaviorSubject<any> = new BehaviorSubject<any>('27');
 
