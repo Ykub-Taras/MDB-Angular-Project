@@ -1,0 +1,3 @@
+<button m4-button btn-style="secondary" [shadow]="true" [rounded]="true" *ngFor="let genre of genres" (click)="navigateToMovie(genre.id)">{{genre.name}}</button>
+
+<app-movies [movies]="movies"></app-movies>

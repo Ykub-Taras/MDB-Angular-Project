@@ -1,0 +1,25 @@
+<div class="card mb-1" style="max-width: 100vm; background: none; text-overflow: ellipsis; overflow: hidden">
+  <div class="row no-gutters">
+    <img class="img-fluid" src="https://image.tmdb.org/t/p/original{{movie.backdrop_path}}" alt="{{movie.title}}"/>
+    <div class="col-md-4">
+      <img class="img-fluid" src="https://image.tmdb.org/t/p/original{{movie.poster_path}}" alt="{{movie.title}}"/>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title">{{movie.title}}</h1>
+        <hr/>
+        <h3 class="card-text">{{movie.overview}}</h3>
+        <h2>Genres:</h2>
+          <ul *ngFor="let genre of movie.genres"><li>{{genre.name}}</li></ul>
+        <h4 class="card-text">Released at: <i>{{movie.release_date}}</i><br/>Spectators
+          rating: {{movie.vote_average}}</h4>
+        <div class="reactStar">
+        <m4-rating [(ngModel)]=movie.vote_average [stars]="10"></m4-rating></div>
+      </div>
+      <br>
+      <br>
+      <button (click)="back()">Return</button>
+    </div>
+</div>
+</div>
+
