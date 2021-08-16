@@ -18,6 +18,7 @@ export class SearchComponent implements OnInit {
   clickEvent($event: string | number) {
     this.dataStoreService.choiceItem.next('search')
     this.dataStoreService.searchItem.next($event);
+  this.dataStoreService.currentPage.next(1)
 
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
