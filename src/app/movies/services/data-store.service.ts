@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 
 @Injectable({
@@ -6,19 +6,20 @@ import {BehaviorSubject} from "rxjs";
 })
 export class DataStoreService {
 
-  choiceItem :BehaviorSubject<any> = new BehaviorSubject<any>('popular');
+  choiceItem: BehaviorSubject<any> = new BehaviorSubject<any>('popular');
 
 
-  idGenre :BehaviorSubject<any> = new BehaviorSubject<any>('27');
+  idGenre: BehaviorSubject<any> = new BehaviorSubject<any>('28');
 
-  currentPage :BehaviorSubject<any> = new BehaviorSubject<number>(1);
+  currentPage: BehaviorSubject<any> = new BehaviorSubject<number>(1);
 
-  allPages :BehaviorSubject<any> = new BehaviorSubject<number>(100);
+  allPages: BehaviorSubject<any> = new BehaviorSubject<number>(100);
 
-  langCode :BehaviorSubject<any> = new BehaviorSubject<any>('en-US');
+  langCode: BehaviorSubject<any> = new BehaviorSubject<any>('en-US');
 
-  searchItem :BehaviorSubject<any> = new BehaviorSubject<any>('');
+  searchItem: BehaviorSubject<any> = new BehaviorSubject<any>('');
 
 
-  constructor() { }
+  constructor() {
+  }
 }

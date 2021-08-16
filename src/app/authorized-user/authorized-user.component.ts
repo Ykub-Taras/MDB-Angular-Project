@@ -12,4 +12,7 @@ export class AuthorizedUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goBack() {
+    history.back()
+  }
 }

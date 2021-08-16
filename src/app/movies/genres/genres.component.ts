@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {GetMovieDataService} from "../services/get-movie-data.service";
 import {IGenres} from "../../models/i-genres";
 import {DataStoreService} from "../services/data-store.service";

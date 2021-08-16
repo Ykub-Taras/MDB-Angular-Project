@@ -14,6 +14,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatDialogModule} from "@angular/material/dialog";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LanguageSwitcherComponent } from './language-switcher/language-switcher.component';
 
 
 
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     NavigationBarComponent,
     AuthorizedUserComponent,
+    LanguageSwitcherComponent,
 
   ],
   imports: [

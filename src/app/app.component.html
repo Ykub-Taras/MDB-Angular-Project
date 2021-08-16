@@ -1,9 +1,11 @@
 <div class="content mat-app-background">
 <div class="app-wrap">
 
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary">    <app-language-switcher></app-language-switcher>
+
     <mat-icon class="mr-8">brightness_7</mat-icon><mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
-    <mat-icon>bedtime</mat-icon> <app-navigation-bar></app-navigation-bar>
+    <mat-icon>bedtime</mat-icon>
+    <app-navigation-bar></app-navigation-bar>
   </mat-toolbar>
   <router-outlet></router-outlet>
 </div>
