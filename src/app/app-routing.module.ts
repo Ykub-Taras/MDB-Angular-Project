@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'user', component: AuthorizedUserComponent}
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
