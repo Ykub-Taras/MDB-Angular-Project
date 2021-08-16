@@ -9,8 +9,6 @@ const routes: Routes = [
 return import('src/app/movies/movies.module').then(value => value.MoviesModule)
 }},
   {path:'user', component:AuthorizedUserComponent}
-
-
 ];
 
 @NgModule({

@@ -11,9 +11,7 @@
         <p>Released at: {{movie?.release_date}}<br>Rating : {{movie?.vote_average}}, voted {{movie?.vote_count}} times</p>
       </div>
       <div class="card-footer">
-<!--        <input data-role="rating" data-stars="10" data-star-color="amber" value="{{movie?.vote_average}}"  data-round-func="round">-->
         <m4-rating [(ngModel)]=movie.vote_average [stars]="10"></m4-rating>
-
       </div>
     </div>
   </div>

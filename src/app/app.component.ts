@@ -9,7 +9,6 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Angular material dark mode';
 
   @HostBinding('class') className = '';
 
@@ -28,17 +27,4 @@ export class AppComponent implements OnInit {
       }
     });
   }
-
-
-
 }
-// import {Component} from '@angular/core';
-//
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: './app.component.html',
-//   styleUrls: ['./app.component.scss']
-// })
-// export class AppComponent {
-//   title = 'Angular-Project-MDB';
-// }
