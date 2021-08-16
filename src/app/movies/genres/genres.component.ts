@@ -16,14 +16,18 @@ export class GenresComponent implements OnInit {
   genres!: IGenres [];
   movies!: IMovie [];
   id: number | undefined
-  // @Output() delete: EventEmitter<any> = new EventEmitter();
+
+  getMovieData():void {
+    this.getMovieDataService.getDiscover().subscribe(value => {
+      this.movies = value.results;
+      this.dataStoreService.allPages.next(value.total_pages);
+    })}
 
   constructor(
     private getMovieDataService: GetMovieDataService
     , private dataStoreService: DataStoreService, private router: Router, private activatedRoute: ActivatedRoute
   ) {    this.getMovieDataService.getGenres().subscribe(({genres}) => this.genres = genres);
-    this.getMovieDataService.getDiscover().subscribe(({results}) => this.movies = results);
-
+    this.getMovieData()
   }
 
   ngOnInit(): void {
@@ -32,8 +36,8 @@ export class GenresComponent implements OnInit {
 
   navigateToMovie(id: number) {
     this.router.navigate(['discover-movies', id], {});
-    this.dataStoreService.idGenre.next(id)
-    this.getMovieDataService.getDiscover().subscribe(({results}) => this.movies = results);
+    this.dataStoreService.idGenre.next(id);
+    this.dataStoreService.currentPage.next(1)
+    this.getMovieData()
   }
-
 }

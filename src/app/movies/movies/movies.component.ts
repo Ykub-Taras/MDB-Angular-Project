@@ -15,17 +15,10 @@ statusOfChoice!:string;
   constructor(private getMovieDataService:GetMovieDataService, private dataStoreService:DataStoreService) {
     this.dataStoreService.choiceItem.subscribe(value => this.statusOfChoice=value)
     if(this.statusOfChoice==='popular'){this.getMovieDataService.getPopular().subscribe(({results}) => this.movies = results)}
-
-    // this.getMovieDataService.getPopular().subscribe(value => this.data = value)
-    //   console.log(this.data);
-
   }
 
   ngOnInit(): void {
-    // if(!this.movies) {
-    //   console.log('loading');
-    //   this.getMovieDataService.getPopular().subscribe(({results}) => this.movies = results)
-    // }
+
   }
 
 }

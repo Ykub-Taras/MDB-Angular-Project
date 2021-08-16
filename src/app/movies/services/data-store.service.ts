@@ -12,7 +12,8 @@ export class DataStoreService {
   idGenre :BehaviorSubject<any> = new BehaviorSubject<any>('27');
 
   currentPage :BehaviorSubject<any> = new BehaviorSubject<number>(1);
-  allPages :BehaviorSubject<any> = new BehaviorSubject<number>(1);
+
+  allPages :BehaviorSubject<any> = new BehaviorSubject<number>(100);
 
   langCode :BehaviorSubject<any> = new BehaviorSubject<any>('en-US');
 

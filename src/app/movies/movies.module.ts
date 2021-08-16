@@ -7,6 +7,7 @@ import {MovieDetailsComponent} from './movie-details/movie-details.component';
 import {NgMetro4Module} from "ng-metro4";
 import {GenresComponent} from './genres/genres.component';
 import {PaginationComponent} from "./pagination/pagination.component";
+import {NgbPaginationModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {PaginationComponent} from "./pagination/pagination.component";
         CommonModule,
         MoviesRoutingModule,
         NgMetro4Module,
+        NgbPaginationModule,
     ]
 })
 export class MoviesModule { }

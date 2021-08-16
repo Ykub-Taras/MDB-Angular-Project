@@ -13,6 +13,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatDialogModule} from "@angular/material/dialog";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -33,7 +34,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatToolbarModule,
     MatIconModule,
     MatSlideToggleModule,
-    MatDialogModule
+    MatDialogModule,
+    NgbModule
   ],
   providers: [{
     provide: MATERIAL_SANITY_CHECKS,
