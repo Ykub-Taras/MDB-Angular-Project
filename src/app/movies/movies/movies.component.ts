@@ -12,15 +12,29 @@ export class MoviesComponent implements OnInit {
  @Input()  movies!: IMovie[];
 statusOfChoice!:string;
 
-  getMovieData():void {
+  getMovieDataP():void {
        this.getMovieDataService.getPopular().subscribe(value => {
+      this.movies = value.results;
+      this.dataStoreService.allPages.next(value.total_pages);
+    })};
+
+  getMovieDataS():void {
+    this.getMovieDataService.getSearch().subscribe(value => {
       this.movies = value.results;
       this.dataStoreService.allPages.next(value.total_pages);
     })}
 
   constructor(private getMovieDataService:GetMovieDataService, private dataStoreService:DataStoreService) {
     this.dataStoreService.choiceItem.subscribe(value => this.statusOfChoice=value)
-    if(this.statusOfChoice==='popular'){this.getMovieData()}
+    // if(this.statusOfChoice==='popular'){this.getMovieData()}
+    switch (this.statusOfChoice) {
+      case 'popular':
+        this.getMovieDataP();
+      break;
+      case 'search': this.getMovieDataS();
+      break;
+      default:
+    }
   }
 
   ngOnInit(): void {

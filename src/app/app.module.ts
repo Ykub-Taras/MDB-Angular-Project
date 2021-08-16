@@ -15,6 +15,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatDialogModule} from "@angular/material/dialog";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LanguageSwitcherComponent } from './language-switcher/language-switcher.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -24,6 +25,7 @@ import { LanguageSwitcherComponent } from './language-switcher/language-switcher
     NavigationBarComponent,
     AuthorizedUserComponent,
     LanguageSwitcherComponent,
+    SearchComponent,
 
   ],
   imports: [
