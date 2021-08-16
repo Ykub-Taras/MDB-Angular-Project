@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataStoreService} from "../movies/services/data-store.service";
 import {Router} from "@angular/router";
 
@@ -8,9 +8,12 @@ import {Router} from "@angular/router";
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+
   model!: string;
 
-  constructor(private dataStoreService:DataStoreService, private router:Router) {}
+  constructor(
+    private dataStoreService:DataStoreService,
+    private router:Router) {}
 
   ngOnInit(): void {
   }
@@ -18,7 +21,7 @@ export class SearchComponent implements OnInit {
   clickEvent($event: string | number) {
     this.dataStoreService.choiceItem.next('search')
     this.dataStoreService.searchItem.next($event);
-  this.dataStoreService.currentPage.next(1)
+    this.dataStoreService.currentPage.next(1)
 
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';

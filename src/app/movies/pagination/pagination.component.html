@@ -1,6 +1,5 @@
 <div class="d-flex justify-content-center">
-  <ngb-pagination (pageChange)="reloadPage($event)" [collectionSize]=total_pages [(page)]="page" [pageSize]="1"
-                  [maxSize]="5" [rotate]="true" [boundaryLinks]="true">
+  <ngb-pagination (pageChange)="reloadPage($event)" [collectionSize]=total_pages [(page)]="page" [pageSize]="1" [maxSize]="5" [rotate]="true" [boundaryLinks]="true">
   </ngb-pagination>
 </div>
 <pre><i>Current page: {{page}} of {{total_pages}}</i></pre>

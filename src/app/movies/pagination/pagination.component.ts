@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {GetMovieDataService} from "../services/get-movie-data.service";
 import {DataStoreService} from "../services/data-store.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-pagination',
@@ -9,12 +9,17 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent implements OnInit {
+
   page!: number;
+
   total_pages!:number;
 
-  constructor(private getMovieDataService:GetMovieDataService, private dataStoreService:DataStoreService, private router:Router, private activatedRoute:ActivatedRoute) {
-    this.dataStoreService.currentPage.subscribe(value => this.page=value);
-    this.dataStoreService.allPages.subscribe(value => this.total_pages=value);
+  constructor(
+    private getMovieDataService:GetMovieDataService,
+    private dataStoreService:DataStoreService,
+    private router:Router) {
+      this.dataStoreService.currentPage.subscribe(value => this.page=value);
+      this.dataStoreService.allPages.subscribe(value => this.total_pages=value);
       }
 
   ngOnInit(): void {
@@ -30,8 +35,6 @@ export class PaginationComponent implements OnInit {
     this.router.navigate([currentUrl]);
 
     this.dataStoreService.currentPage.next(page);
-    this.dataStoreService.currentPage.subscribe(value =>  console.log(value));
-
 
   }
 }

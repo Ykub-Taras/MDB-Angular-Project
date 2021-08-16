@@ -1,14 +1,20 @@
 <a routerLink="/info/{{movie?.id}}" style="color: inherit;  text-decoration: none">
   <div class="image-header" style="text-overflow: ellipsis; overflow: hidden">
     <div class="card-content bg-teal-hover ani-hover-bounce p-2">
-      <h4 class="badge inside bg-teal  fg-steel" style="position: absolute; right: 7px; top: 7px; font-weight: bold">{{movie?.vote_average}}</h4>
+      <h4 class="badge inside bg-teal  fg-steel" style="position: absolute; right: 7px; top: 7px; font-weight: bold">
+        {{movie?.vote_average}}
+      </h4>
       <img src="https://image.tmdb.org/t/p/w300{{movie?.poster_path}}" alt="{{movie?.title}}" width="100%">
       <div class="card-header" >
         <h2>
-          <b>{{movie?.title}}</b></h2>
+          <b>{{movie?.title}}</b>
+        </h2>
         <p *ngIf="(movie?.title!==movie?.original_title)">
-          ( {{movie?.original_title}} )</p>
-        <p>Released at: {{movie?.release_date}}<br>Rating : {{movie?.vote_average}}, voted {{movie?.vote_count}} times</p>
+          ( {{movie?.original_title}} )
+        </p>
+        <p>Released at: {{movie?.release_date}}
+          <br>Rating : {{movie?.vote_average}}, voted {{movie?.vote_count}} times
+        </p>
       </div>
       <div class="card-footer">
         <m4-rating [(ngModel)]=movie.vote_average [stars]="10"></m4-rating>

@@ -1,10 +1,22 @@
-a {align-items: center}
-mat-toolbar {display: block;
+a {
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  display: block
 }
-div, ul {width: 100%;
+
+mat-toolbar {
+  display: block;
+}
+
+div, ul {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-background: none;
+  background: none;
 }
-li {margin: 0 auto;
-width: 15vw}
+
+li {
+  margin: 0 auto;
+  width: 15vw
+}

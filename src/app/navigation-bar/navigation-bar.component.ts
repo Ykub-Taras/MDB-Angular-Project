@@ -13,8 +13,12 @@ export class NavigationBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setChoiceP() {this.dataStoreService.choiceItem.next('popular');    this.dataStoreService.currentPage.next(1)
+  setChoiceP() {
+    this.dataStoreService.choiceItem.next('popular');
+    this.dataStoreService.currentPage.next(1)
   }
-  setChoiceD() {this.dataStoreService.choiceItem.next('discover');    this.dataStoreService.currentPage.next(1)
+  setChoiceD() {
+    this.dataStoreService.choiceItem.next('discover');
+    this.dataStoreService.currentPage.next(1)
   }
 }

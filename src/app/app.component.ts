@@ -1,7 +1,7 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { OverlayContainer } from '@angular/cdk/overlay';
+import {Component, HostBinding, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {MatDialog} from '@angular/material/dialog';
+import {OverlayContainer} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,10 @@ export class AppComponent implements OnInit {
 
   toggleControl = new FormControl(false);
 
-  constructor(private dialog: MatDialog, private overlay: OverlayContainer) { }
+  constructor(
+    private dialog: MatDialog,
+    private overlay: OverlayContainer) {
+  }
 
   ngOnInit(): void {
     this.toggleControl.valueChanges.subscribe((darkMode) => {

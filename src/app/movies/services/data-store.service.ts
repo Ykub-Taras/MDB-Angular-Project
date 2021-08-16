@@ -8,12 +8,11 @@ export class DataStoreService {
 
   choiceItem: BehaviorSubject<any> = new BehaviorSubject<any>('popular');
 
-
   idGenre: BehaviorSubject<any> = new BehaviorSubject<any>('28');
 
   currentPage: BehaviorSubject<any> = new BehaviorSubject<number>(1);
 
-  allPages: BehaviorSubject<any> = new BehaviorSubject<number>(100);
+  allPages: BehaviorSubject<any> = new BehaviorSubject<number>(5);
 
   langCode: BehaviorSubject<any> = new BehaviorSubject<any>('en-US');
 

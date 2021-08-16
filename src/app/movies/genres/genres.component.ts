@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {GetMovieDataService} from "../services/get-movie-data.service";
 import {IGenres} from "../../models/i-genres";
 import {DataStoreService} from "../services/data-store.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Router} from "@angular/router";
 import {IMovie} from "../../models/i-movie";
 
 
@@ -24,9 +24,10 @@ export class GenresComponent implements OnInit {
     })}
 
   constructor(
-    private getMovieDataService: GetMovieDataService
-    , private dataStoreService: DataStoreService, private router: Router, private activatedRoute: ActivatedRoute
-  ) {    this.getMovieDataService.getGenres().subscribe(({genres}) => this.genres = genres);
+    private getMovieDataService: GetMovieDataService,
+    private dataStoreService: DataStoreService,
+    private router: Router) {
+      this.getMovieDataService.getGenres().subscribe(({genres}) => this.genres = genres);
     this.getMovieData()
   }
 
@@ -35,7 +36,7 @@ export class GenresComponent implements OnInit {
   }
 
   navigateToMovie(id: number) {
-    this.router.navigate(['discover-movies', id], {});
+    this.router.navigate(['discover-movies', id]);
     this.dataStoreService.idGenre.next(id);
     this.dataStoreService.currentPage.next(1)
     this.getMovieData()

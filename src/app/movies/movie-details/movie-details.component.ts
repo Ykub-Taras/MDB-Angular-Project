@@ -12,9 +12,13 @@ let id:number
   styleUrls: ['./movie-details.component.scss']
 })
 export class MovieDetailsComponent implements OnInit {
+
   movie!:IMovieDetails
-  constructor(private activatedRoute:ActivatedRoute, private getMovieDataService:GetMovieDataService) {
-    id=this.activatedRoute.snapshot.params.id
+
+  constructor(
+    private activatedRoute:ActivatedRoute,
+    private getMovieDataService:GetMovieDataService) {
+      id=this.activatedRoute.snapshot.params.id
   }
 
   ngOnInit(): void {
